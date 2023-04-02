@@ -14,4 +14,4 @@ def solution(p: float, x: np.array) -> tuple:
     loc = x.mean()
     betta = p
     
-    return (loc - 0.092)/(1-alpha) + 0.092, (loc - 0.092)/(betta) + 0.092
+    return min((loc - 0.092)/(1-alpha) + 0.092, (loc - 0.092)/(betta) + 0.092), max((loc - 0.092)/(1-alpha) + 0.092, (loc - 0.092)/(betta) + 0.092)
